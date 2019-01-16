@@ -18,7 +18,8 @@ namespace GuessingGame
                 Console.WriteLine("4. Iteration 4");
                 Console.WriteLine("5. Iteration 5");
                 Console.WriteLine("6. Iteration 6");
-                Console.WriteLine("7. Quit");
+                Console.WriteLine("7. Stretch Task");
+                Console.WriteLine("0. Quit");
                 Console.WriteLine("Type the number of the task you wish to perform:");
 
                 intChoice = Convert.ToInt32(Console.ReadLine());
@@ -44,6 +45,9 @@ namespace GuessingGame
                         IterationSix();
                         break;
                     case 7:
+                        IterationSeven();
+                        break;
+                    case 0:
                         return;
                 }
             } while (bQuit == false);
@@ -55,43 +59,6 @@ namespace GuessingGame
 
         }
 
-        static void IterationSix()
-        {
-            Random rRandomNum = new Random();
-            int intCorrectNum = rRandomNum.Next(1, 10);
-
-            int intRun = 0;
-
-            do
-            {
-                Console.WriteLine("Guess a number between 1 and 10.");
-                int intGuess = Convert.ToInt32(Console.ReadLine());
-
-                if (intGuess == intCorrectNum)
-                {
-                    Console.WriteLine("You win!");
-                    intRun = 2;
-                }
-                else if (intGuess == 0)
-                {
-                    Console.WriteLine("Type a whole number from 1 to 10.");
-                }
-                else if (intGuess == -1)
-                {
-                    return;
-                }
-                else
-                {
-                    Console.WriteLine("Try again!");
-                    intRun++;
-                    if (intGuess < intCorrectNum)
-                        Console.WriteLine("The answer is higher than you thought...");
-                    else
-                        Console.WriteLine("The answer is lower than you thought...");
-                }
-
-            } while (intRun < 2);
-        }
         static void IterationOne()
         {
             Console.WriteLine("Guess a number between 1 and 10.");
@@ -210,5 +177,82 @@ namespace GuessingGame
 
             } while (intRun < 2);
         }
+
+        static void IterationSix()
+        {
+            Random rRandomNum = new Random();
+            int intCorrectNum = rRandomNum.Next(1, 10);
+
+            int intRun = 0;
+
+            do
+            {
+                Console.WriteLine("Guess a number between 1 and 10.");
+                int intGuess = Convert.ToInt32(Console.ReadLine());
+
+                if (intGuess == intCorrectNum)
+                {
+                    Console.WriteLine("You win!");
+                    intRun = 2;
+                }
+                else if (intGuess == 0)
+                {
+                    Console.WriteLine("Type a whole number from 1 to 10.");
+                }
+                else if (intGuess == -1)
+                {
+                    return;
+                }
+                else
+                {
+                    Console.WriteLine("Try again!");
+                    intRun++;
+                    if (intGuess < intCorrectNum)
+                        Console.WriteLine("The answer is higher than you thought...");
+                    else
+                        Console.WriteLine("The answer is lower than you thought...");
+                }
+
+            } while (intRun < 2);
+        }
+
+        static void IterationSeven()
+        {
+            Random rRandomNum = new Random();
+            int intCorrectNum = rRandomNum.Next(1, 10);
+
+            int intRun = 0;
+
+            do
+            {
+                Console.WriteLine("Guess a number between 1 and 10.");
+                int intGuess = Convert.ToInt32(Console.ReadLine());
+
+                if (intGuess == intCorrectNum)
+                {
+                    Console.WriteLine("You win!");
+                    intRun = 2;
+                }
+                else if (intGuess == 0)
+                {
+                    Console.WriteLine("Type a whole number from 1 to 10.");
+                }
+                else if (intGuess == -1)
+                {
+                    return;
+                }
+                else
+                {
+                    Console.WriteLine("Try again!");
+                    intRun++;
+                    if (intGuess < intCorrectNum)
+                        Console.WriteLine("The answer is higher than you thought...");
+                    else
+                        Console.WriteLine("The answer is lower than you thought...");
+                }
+
+            } while (intRun < 3);
+        }
+
     }
 }
