@@ -68,14 +68,18 @@ namespace GuessingGame
 
         static void IterationTwo()
         {
-            Console.WriteLine("Guess a number between 1 and 10.");
+            Console.WriteLine("Guess a number between 1 and 10, 0 for more information.");
             int userGuess = Convert.ToInt32(Console.ReadLine());
 
 
             if (userGuess == 7)
                 Console.WriteLine("You win!");
             else if (userGuess == 0)
+            {
                 Console.WriteLine("Type a whole number from 1 to 10.");
+                Console.WriteLine("Press ENTER to submit your guess.");
+                userGuess = Convert.ToInt32(Console.ReadLine());
+            }
             else
                 Console.WriteLine("You lose!");
         }
@@ -96,7 +100,9 @@ namespace GuessingGame
                 }
                 else if (userGuess == 0)
                 {
-                    Console.WriteLine("Type a whole number from 1 to 10.");
+                    Console.WriteLine("Type a whole number from 1 to 10, 0 for more information.");
+                    Console.WriteLine("Press ENTER to submit your guess.");
+                    userGuess = Convert.ToInt32(Console.ReadLine());
                 }
                 else
                 {
@@ -123,7 +129,9 @@ namespace GuessingGame
                 }
                 else if (userGuess == 0)
                 {
-                    Console.WriteLine("Type a whole number from 1 to 10.");
+                    Console.WriteLine("Type a whole number from 1 to 10, 0 for more information.");
+                    Console.WriteLine("Press ENTER to submit your guess.");
+                    userGuess = Convert.ToInt32(Console.ReadLine());
                 }
                 else if (userGuess == -1)
                 {
@@ -154,7 +162,9 @@ namespace GuessingGame
                 }
                 else if (userGuess == 0)
                 {
-                    Console.WriteLine("Type a whole number from 1 to 10.");
+                    Console.WriteLine("Type a whole number from 1 to 10, 0 for more information.");
+                    Console.WriteLine("Press ENTER to submit your guess.");
+                    userGuess = Convert.ToInt32(Console.ReadLine());
                 }
                 else if (userGuess == -1)
                 {
@@ -192,7 +202,9 @@ namespace GuessingGame
                 }
                 else if (userGuess == 0)
                 {
-                    Console.WriteLine("Type a whole number from 1 to 10.");
+                    Console.WriteLine("Type a whole number from 1 to 10, 0 for more information.");
+                    Console.WriteLine("Press ENTER to submit your guess.");
+                    userGuess = Convert.ToInt32(Console.ReadLine());
                 }
                 else if (userGuess == -1)
                 {
@@ -230,7 +242,9 @@ namespace GuessingGame
                 }
                 else if (userGuess == 0)
                 {
-                    Console.WriteLine("Type a whole number from 1 to 10.");
+                    Console.WriteLine("Type a whole number from 1 to 10, 0 for more information.");
+                    Console.WriteLine("Press ENTER to submit your guess.");
+                    userGuess = Convert.ToInt32(Console.ReadLine());
                 }
                 else if (userGuess == -1)
                 {
@@ -249,5 +263,9 @@ namespace GuessingGame
             } while (countTry < 3);
         }
 
+        static void Experimenting()
+        {
+            
+        }
     }
 }
