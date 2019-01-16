@@ -8,6 +8,7 @@ namespace GuessingGame
         {
             bool quit = false;
 
+            //menu
             do
             {
                 Console.WriteLine("Welcome to the Guessing Game!");
